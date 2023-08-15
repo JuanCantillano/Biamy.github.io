@@ -1,0 +1,103 @@
+/* Estilos generales */
+.slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider img {
+  height: auto; /* Cambiamos la altura a 'auto' para que las imágenes conserven su relación de aspecto */
+  width: 100%; /* El ancho del 100% hará que las imágenes se ajusten al ancho del slider */
+}
+
+.slider ul {
+  display: flex;
+  padding: 0;
+  width: 400%; /* Ajustamos el ancho del 400% para que haya suficiente espacio para todas las imágenes */
+  animation: cambio 20s infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+}
+
+.slider li {
+  width: 25%; /* Ajustamos el ancho del 25% para que cada imagen ocupe un cuarto del slider */
+}
+
+@keyframes cambio {
+  0% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: 0;
+  }
+
+  30% {
+    margin-left: -100%;
+  }
+  55% {
+    margin-left: -100%;
+  }
+
+  60% {
+    margin-left: -200%;
+  }
+  85% {
+    margin-left: -200%;
+  }
+
+  90% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: -300%;
+  }
+}
+
+/* Media Queries para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .slider img {
+    height: auto; /* Cambiamos la altura a 'auto' para que las imágenes conserven su relación de aspecto */
+    width: 100%; /* El ancho del 100% hará que las imágenes se ajusten al ancho del slider */
+  }
+
+  .slider ul {
+    width: 400%; /* Ajustamos el ancho del 400% para que haya suficiente espacio para todas las imágenes en dispositivos móviles */
+  }
+
+  .slider li {
+    width: 100%; /* Ajustamos el ancho del 100% para que cada imagen ocupe toda la pantalla */
+  }
+
+  @keyframes cambio {
+    0% {
+      margin-left: 0;
+    }
+    12.5% {
+      margin-left: 0;
+    }
+
+    25% {
+      margin-left: -100%;
+    }
+    37.5% {
+      margin-left: -100%;
+    }
+
+    50% {
+      margin-left: -200%;
+    }
+    62.5% {
+      margin-left: -200%;
+    }
+
+    75% {
+      margin-left: -300%;
+    }
+    87.5% {
+      margin-left: -300%;
+    }
+
+    100% {
+      margin-left: -300%;
+    }
+  }
+}
